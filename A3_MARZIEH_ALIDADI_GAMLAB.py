@@ -3,7 +3,17 @@
 Created on Sun Oct 13 22:43:18 2024
 
 @author: shamsabadi
+
+APM:
+notes:
+salam awlie , baratoon cleaning anjam dadam
+fght dar entha dar ghesmate report --> kamel benevisd data ha chian , vorodi ha chian khoroji chian
+hadaf chie chanta mdoel estefade krdid va kodom mdoel behtare va badesh submit konid va ersal konid baraye man
+
 """
+
+#-----------Import Libs----------------------
+
 from sklearn.datasets import load_breast_cancer
 from sklearn.model_selection import KFold
 from sklearn.model_selection import GridSearchCV
@@ -13,10 +23,17 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.svm import SVC
 
-#******************logesticregression************************************8
+
+#-----------Import Data----------------------
 data=load_breast_cancer()
+
+#-----------Step1 : X and Y ----------------------
 x=data.data
 y=data.target
+
+#----------step2 : K fold split (cross validation)----------
+#******************logesticregression************************************8
+
 kf= KFold(n_splits=5,shuffle=True,random_state=42)
 model=LogisticRegression()
 my_params= {}
@@ -27,10 +44,6 @@ gs.best_params_
 
 
 #**********************************KNN**********************************8
-data=load_breast_cancer()
-x=data.data
-y=data.target
-kf= KFold(n_splits=5,shuffle=True,random_state=42)
 model=KNeighborsClassifier() 
 my_params= { 'n_neighbors':[1,5,10,15,20,25,30],
             'metric':['minkowski'  , 'euclidean' , 'manhattan'] }
@@ -41,10 +54,6 @@ gs.best_params_
 
 
 #**********************DT**************************************
-data=load_breast_cancer()
-x=data.data
-y=data.target
-kf= KFold(n_splits=5,shuffle=True,random_state=42)
 model=DecisionTreeClassifier(random_state=42)
 my_params={ 'max_depth':[1,5,8,10,15,20,25],
            'min_samples_split':[5,10,15],
@@ -56,10 +65,6 @@ gs.best_params_
 
 
 #********************************************RF**************************
-data=load_breast_cancer()
-x=data.data
-y=data.target
-kf= KFold(n_splits=5,shuffle=True,random_state=42)
 model=RandomForestClassifier(random_state=42)
 my_params={ 'n_estimators':[10,20,30,40,50],
            'max_features':[4,8,12]}
@@ -69,10 +74,6 @@ gs.best_score_
 gs.best_params_ 
 
 #**********************************SVC*************************
-data=load_breast_cancer()
-x=data.data
-y=data.target
-kf= KFold(n_splits=5,shuffle=True,random_state=42)
 model=SVC()
 my_params={'kernel':['poly','rbf','linear'],
            'C':[0.001,0.01,1,10,50],
@@ -118,6 +119,23 @@ Out[96]: {'max_features': 4, 'n_estimators': 40}
 
 '''
 SVC
+
+
+'''
+
+#====================================================
+#====================================================
+#====================================================
+#====================================================
+
+'''
+FINAL REPORT :
+
+
+
+
+
+
 
 
 '''
