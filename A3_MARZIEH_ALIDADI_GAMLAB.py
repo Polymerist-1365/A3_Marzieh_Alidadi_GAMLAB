@@ -1,3 +1,18 @@
+
+'''
+APM:
+
+Salam
+daryaft shod besiar awli
+moafagh bashid
+
+
+
+
+
+
+'''
+
 # -*- coding: utf-8 -*-
 """
 Created on Sun Oct 13 22:43:18 2024
